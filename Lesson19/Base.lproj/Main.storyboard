@@ -31,11 +31,20 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="To-Do List" id="GrM-m2-KRx">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="sSc-2f-U2K">
-                            <connections>
-                                <action selector="addListAction:" destination="y0G-7o-CAU" id="jmK-aN-Qlz"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="sSc-2f-U2K">
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="addListAction:" destination="y0G-7o-CAU" id="jmK-aN-Qlz"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="trash" id="kDY-Jx-Pbm">
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="deleteAllTasks:" destination="y0G-7o-CAU" id="yq2-XZ-itS"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EAb-W8-QyZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -50,6 +59,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="gHj-mx-Qar">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.64780467750000004" green="0.10811231289999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
