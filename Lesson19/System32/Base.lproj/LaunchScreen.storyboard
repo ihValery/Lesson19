@@ -16,35 +16,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coreData" translatesAutoresizingMaskIntoConstraints="NO" id="Lxe-0P-PJG">
-                                <rect key="frame" x="0.0" y="237" width="390" height="370"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backGroundWB" translatesAutoresizingMaskIntoConstraints="NO" id="Lxe-0P-PJG">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Core Data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t7D-Z0-b4J">
-                                <rect key="frame" x="99" y="234" width="127" height="36"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
-                                <color key="textColor" red="0.23574346299999999" green="0.33743405339999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Core Data" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OVU-nW-e67">
+                                <rect key="frame" x="211.66666666666663" y="576" width="133.33333333333337" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lessom19" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VYo-7x-abz">
-                                <rect key="frame" x="221" y="571" width="130" height="36"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
-                                <color key="textColor" red="0.64379507300000005" green="0.1152678803" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lesson19" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="idQ-rb-WUc">
+                                <rect key="frame" x="244" y="623" width="101" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="t7D-Z0-b4J" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="190" id="4oX-Eg-8Bu"/>
-                            <constraint firstItem="VYo-7x-abz" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="A1K-HI-4dl"/>
-                            <constraint firstItem="Lxe-0P-PJG" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="S2v-MM-eaB"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VYo-7x-abz" secondAttribute="trailing" constant="39" id="Tlp-bd-Qki"/>
-                            <constraint firstItem="Lxe-0P-PJG" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Vpi-ta-7y6"/>
-                            <constraint firstItem="Lxe-0P-PJG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="YwD-aC-psh"/>
-                            <constraint firstItem="t7D-Z0-b4J" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="99" id="dBp-WR-QJy"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="VYo-7x-abz" secondAttribute="bottom" constant="203" id="eT4-HU-gEK"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="t7D-Z0-b4J" secondAttribute="trailing" symbolic="YES" id="jtM-e1-c45"/>
-                            <constraint firstItem="Lxe-0P-PJG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="193" id="yqh-Z1-ZDl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OVU-nW-e67" secondAttribute="trailing" constant="45" id="01F-9U-vqT"/>
+                            <constraint firstItem="idQ-rb-WUc" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" symbolic="YES" id="CgQ-KJ-DOq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="idQ-rb-WUc" secondAttribute="bottom" constant="157" id="Jeg-4f-JXh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="idQ-rb-WUc" secondAttribute="trailing" constant="45" id="T6v-N5-PoD"/>
+                            <constraint firstItem="Lxe-0P-PJG" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="UA9-Uo-dUE"/>
+                            <constraint firstItem="OVU-nW-e67" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" symbolic="YES" id="qsG-tt-Zsc"/>
+                            <constraint firstItem="idQ-rb-WUc" firstAttribute="top" secondItem="OVU-nW-e67" secondAttribute="bottom" constant="11" id="su9-YC-wU7"/>
+                            <constraint firstItem="Lxe-0P-PJG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="w6i-9R-ITG"/>
+                            <constraint firstAttribute="trailing" secondItem="Lxe-0P-PJG" secondAttribute="trailing" id="xQl-Yo-zf5"/>
+                            <constraint firstAttribute="bottom" secondItem="Lxe-0P-PJG" secondAttribute="bottom" id="xRH-XH-Td5"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -54,7 +54,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="coreData" width="512" height="512"/>
+        <image name="backGroundWB" width="548" height="975"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

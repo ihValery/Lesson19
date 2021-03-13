@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		804EFF2B25FAC709004589DC /* ToDoTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804EFF2A25FAC709004589DC /* ToDoTVC.swift */; };
+		804EFF2B25FAC709004589DC /* CategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804EFF2A25FAC709004589DC /* CategoryVC.swift */; };
+		804FEC2E25FBE10C0062B095 /* TodoListTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804FEC2D25FBE10C0062B095 /* TodoListTVC.swift */; };
 		80E8AC7E25FAAFB70058F329 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E8AC7D25FAAFB70058F329 /* AppDelegate.swift */; };
 		80E8AC8025FAAFB70058F329 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E8AC7F25FAAFB70058F329 /* SceneDelegate.swift */; };
 		80E8AC8525FAAFB70058F329 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80E8AC8325FAAFB70058F329 /* Main.storyboard */; };
@@ -17,7 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		804EFF2A25FAC709004589DC /* ToDoTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTVC.swift; sourceTree = "<group>"; };
+		804EFF2A25FAC709004589DC /* CategoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryVC.swift; sourceTree = "<group>"; };
+		804FEC2D25FBE10C0062B095 /* TodoListTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListTVC.swift; sourceTree = "<group>"; };
 		80E8AC7A25FAAFB70058F329 /* Lesson19.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lesson19.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80E8AC7D25FAAFB70058F329 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		80E8AC7F25FAAFB70058F329 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +53,31 @@
 			path = System32;
 			sourceTree = "<group>";
 		};
+		804FEC5425FC9C0B0062B095 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				80E8AC8625FAAFB70058F329 /* Lesson19.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		804FEC5525FC9C210062B095 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				80E8AC8325FAAFB70058F329 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		804FEC5625FC9C7E0062B095 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				804FEC2D25FBE10C0062B095 /* TodoListTVC.swift */,
+				804EFF2A25FAC709004589DC /* CategoryVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		80E8AC7125FAAFB70058F329 = {
 			isa = PBXGroup;
 			children = (
@@ -70,9 +97,9 @@
 		80E8AC7C25FAAFB70058F329 /* Lesson19 */ = {
 			isa = PBXGroup;
 			children = (
-				80E8AC8325FAAFB70058F329 /* Main.storyboard */,
-				804EFF2A25FAC709004589DC /* ToDoTVC.swift */,
-				80E8AC8625FAAFB70058F329 /* Lesson19.xcdatamodeld */,
+				804FEC5425FC9C0B0062B095 /* Model */,
+				804FEC5525FC9C210062B095 /* View */,
+				804FEC5625FC9C7E0062B095 /* Controller */,
 				804EFF2625FABBE5004589DC /* System32 */,
 			);
 			path = Lesson19;
@@ -150,8 +177,9 @@
 			files = (
 				80E8AC7E25FAAFB70058F329 /* AppDelegate.swift in Sources */,
 				80E8AC8025FAAFB70058F329 /* SceneDelegate.swift in Sources */,
+				804FEC2E25FBE10C0062B095 /* TodoListTVC.swift in Sources */,
 				80E8AC8825FAAFB70058F329 /* Lesson19.xcdatamodeld in Sources */,
-				804EFF2B25FAC709004589DC /* ToDoTVC.swift in Sources */,
+				804EFF2B25FAC709004589DC /* CategoryVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
