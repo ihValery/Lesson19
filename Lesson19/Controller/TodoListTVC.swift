@@ -85,9 +85,10 @@ class TodoListTVC: UITableViewController
 
     @IBAction func addItemPressed(_ sender: UIBarButtonItem)
     {
-        let alert = UIAlertController(title: "Новый элемент", message: "Пожалуйста, добавьте новый элемент", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Новый элемент", message: nil, preferredStyle: .alert)
         let cancel = UIAlertAction(title: "Отмена", style: .cancel) { _ in }
         let action = UIAlertAction(title: "Добавить", style: .default) { _ in
+            
             if let tf = alert.textFields?.first {
                 if tf.text != "" && tf.text != nil {
                     let newItem = Item(context: self.context)
@@ -101,28 +102,26 @@ class TodoListTVC: UITableViewController
                 }
             }
         }
-        
-        alert.addTextField { (textField) in
-            textField.placeholder = "Молоко"
+        alert.addTextField { tf in
+            let itemList = ["Яйцо", "Молоко", "Печенька", "Вкусняшка"]
+            tf.placeholder = itemList.randomElement()
         }
-        
         alert.addAction(action)
         alert.addAction(cancel)
         present(alert, animated: true)
     }
     
-    // Marker: Save and load from core data
-    //
+    //Core Data сохранение и загрузка
     private func saveItems() {
         do {
             try context.save()
         } catch {
-            print("Error saving context: \(error)")
+            print("Ошибка при сохранении: \(error)")
         }
     }
     
-    private func loadItems(with request: NSFetchRequest<Item> = Item.fetchRequest(), predicate: NSPredicate? = nil) {
-        
+    private func loadItems(with request: NSFetchRequest<Item> = Item.fetchRequest(), predicate: NSPredicate? = nil)
+    {
         let categoryPredicate = NSPredicate(format: "parentCategory.name MATCHES %@", selectedCategory!.name!)
         
         if let additionalPredicate = predicate {
@@ -134,33 +133,25 @@ class TodoListTVC: UITableViewController
         do {
             itemArray = try context.fetch(request)
         } catch {
-            print("Error fetching data from context: \(error)")
+            print("Ошибка при получении: \(error)")
         }
         tableView.reloadData()
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
 }
 
-// Marker: SearchBar Delegate
-//
-extension TodoListTVC: UISearchBarDelegate {
-    
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+//MARK: -  SearchBar Delegate
+extension TodoListTVC: UISearchBarDelegate
+{
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String)
+    {
         let request: NSFetchRequest<Item> = Item.fetchRequest()
-        // [cd] makes the search case and diacritic insensitive http://nshipster.com/nspredicate/
-        //
+        //Делает поисковый регистр и диакритические знаки нечувствительными
         let searchPredicate: NSPredicate = NSPredicate(format: "title CONTAINS[cd] %@", searchBar.text!)
         request.sortDescriptors = [NSSortDescriptor(key: "title", ascending: true)]
         loadItems(with: request, predicate: searchPredicate)
-    }
-    
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
         if searchBar.text?.count == 0 {
-            // User just cleared the search bar reload everything so their previous search is gone
-            //
+            //Пользователь только что очистил панель поиска, перезагрузите все, поэтому предыдущий поиск исчез.
             loadItems()
             searchBar.resignFirstResponder()
         }

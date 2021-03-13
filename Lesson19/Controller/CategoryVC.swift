@@ -91,15 +91,15 @@ class CategoryViewController: UITableViewController
         do {
             categories = try context.fetch(request)
         } catch {
-            print("Ошибка при ролучении: \(error)")
+            print("Ошибка при получении: \(error)")
         }
         tableView.reloadData()
     }
     
-    // Marker: Добавление новой категории
+    //MARK: -  Добавление новой категории
     @IBAction func addBarButtonPressed(_ sender: UIBarButtonItem)
     {
-        let alert = UIAlertController(title: "Новая категория", message: "Пожалуйста, добавьте новую категорию", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Новая категория", message: nil, preferredStyle: .alert)
         let cancel = UIAlertAction(title: "Отмена", style: .cancel) { _ in }
         let action = UIAlertAction(title: "Добавить", style: .default) { _ in
             
@@ -114,11 +114,9 @@ class CategoryViewController: UITableViewController
                 }
             }
         }
-        
         alert.addTextField { tf in
             tf.placeholder = "Список покупок"
         }
-        
         alert.addAction(action)
         alert.addAction(cancel)
         present(alert, animated: true)
