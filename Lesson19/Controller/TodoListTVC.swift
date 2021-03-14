@@ -47,15 +47,19 @@ class TodoListTVC: UITableViewController
     {
         tableView.deselectRow(at: indexPath, animated: true)
         itemArray[indexPath.row].done = !itemArray[indexPath.row].done
-//        itemArray[indexPath.row] = itemArray[indexPath.last!]
+//        let itemToMove = itemArray.remove(at: indexPath.row)
+//        itemArray.insert(itemToMove, at: itemArray.count)
+//        let destinationindexPath = NSIndexPath(row: 0, section: indexPath.section)
+//        tableView.moveRow(at: indexPath, to: destinationindexPath as IndexPath)
+//        tableView.reloadData()
         self.saveItems()
         tableView.reloadRows(at: [indexPath], with: .fade)
     }
     
-//    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool
-//    {
-//        return true
-//    }
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool
+    {
+        return true
+    }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath)
     {
@@ -137,6 +141,34 @@ class TodoListTVC: UITableViewController
         }
         tableView.reloadData()
     }
+//MARK: - Design
+
+func designBackground()
+{
+    navigationController?.navigationBar.barTintColor = UIColor(red: 224 / 255, green: 224 / 255, blue: 224 / 255, alpha: 1)
+    
+//        clearsSelectionOnViewWillAppear = true
+
+    let backgroundImage = UIImage(named: "backGroundWB")
+    let imageView = UIImageView(image: backgroundImage)
+    imageView.contentMode = .scaleAspectFill
+    tableView.backgroundView = imageView
+    
+    let blurEffect = UIBlurEffect(style: .light)
+    let blurView = UIVisualEffectView(effect: blurEffect)
+    blurView.frame = imageView.bounds
+    blurView.alpha = 1
+    imageView.addSubview(blurView)
+    
+    //Убираем лишнии линии в таблице
+    tableView.tableFooterView = UIView()
+}
+
+override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath)
+{
+    cell.backgroundColor = .clear
+//        cell.backgroundColor = UIColor(white: 1, alpha: 0.3)
+    }
 }
 
 //MARK: -  SearchBar Delegate
@@ -155,33 +187,5 @@ extension TodoListTVC: UISearchBarDelegate
             loadItems()
             searchBar.resignFirstResponder()
         }
-    }
-    
-    //MARK: - Design
-    
-    func designBackground()
-    {
-        navigationController?.navigationBar.barTintColor = UIColor(red: 224 / 255, green: 224 / 255, blue: 224 / 255, alpha: 1)
-        
-//        clearsSelectionOnViewWillAppear = true
-
-        let backgroundImage = UIImage(named: "backGroundWB")
-        let imageView = UIImageView(image: backgroundImage)
-        imageView.contentMode = .scaleAspectFill
-        tableView.backgroundView = imageView
-        
-        let blurEffect = UIBlurEffect(style: .light)
-        let blurView = UIVisualEffectView(effect: blurEffect)
-        blurView.frame = imageView.bounds
-        blurView.alpha = 1
-        imageView.addSubview(blurView)
-        
-        //Убираем лишнии линии в таблице
-        tableView.tableFooterView = UIView()
-    }
-    
-    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        cell.backgroundColor = .clear
-//        cell.backgroundColor = UIColor(white: 1, alpha: 0.3)
     }
 }

@@ -40,12 +40,12 @@
                     </navigationItem>
                     <connections>
                         <outlet property="addBarButton" destination="Pux-Jt-7I8" id="9GP-cQ-hVW"/>
-                        <segue destination="HaX-rn-OEM" kind="show" identifier="goToItems" id="8nm-md-KSW"/>
+                        <segue destination="HaX-rn-OEM" kind="show" identifier="goToItems" id="tv3-by-O2v"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v0q-iC-As2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1094" y="-24"/>
+            <point key="canvasLocation" x="1092.753623188406" y="-24.107142857142858"/>
         </scene>
         <!--Items-->
         <scene sceneID="44E-Wj-fYP">
