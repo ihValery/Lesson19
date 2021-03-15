@@ -32,6 +32,13 @@ class CategoryViewController: UITableViewController
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellCategory", for: indexPath)
         cell.textLabel?.text = categories[indexPath.row].name
+        
+        cell.textLabel?.layer.shadowOffset = CGSize(width: 1, height: 1)
+        cell.textLabel?.layer.shadowRadius = 7
+        cell.textLabel?.layer.shadowOpacity = 1
+//        cell.textLabel?.layer.shadowColor = .init(red: 1, green: 1, blue: 1, alpha: 1)
+        cell.textLabel?.layer.shadowColor = .init(red: 224 / 255, green: 224 / 255, blue: 224 / 255, alpha: 1)
+        
         return cell
     }
     
@@ -86,14 +93,15 @@ class CategoryViewController: UITableViewController
         self.saveCategories()
     }
 */
-    
+  
+/*
     func update(at index: Int)
     {
         let fetchRequest: NSFetchRequest<Category> = Category.fetchRequest()
         
         do {
             let tasks = try context.fetch(fetchRequest)
-            let deleteCell = tasks[index] as NSManagedObject
+//            let deleteCell = tasks[index] as NSManagedObject
             self.categories[index].name = categories[0].name
             
             tableView.reloadData()
@@ -113,7 +121,7 @@ class CategoryViewController: UITableViewController
             print(error.localizedDescription)
         }
     }
-    
+*/
     
     //MARK: -  Свайпы
     

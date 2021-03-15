@@ -154,10 +154,10 @@ func designBackground()
     imageView.contentMode = .scaleAspectFill
     tableView.backgroundView = imageView
     
-    let blurEffect = UIBlurEffect(style: .light)
+    let blurEffect = UIBlurEffect(style: .systemUltraThinMaterialLight)
     let blurView = UIVisualEffectView(effect: blurEffect)
     blurView.frame = imageView.bounds
-    blurView.alpha = 1
+//    blurView.alpha = 1
     imageView.addSubview(blurView)
     
     //Убираем лишнии линии в таблице
